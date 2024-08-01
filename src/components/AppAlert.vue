@@ -1,5 +1,9 @@
 <script setup>
 import { computed } from "vue";
+import IconInfo from "./icons/IconInfo.vue";
+import IconSuccess from "./icons/IconSuccess.vue";
+import IconWarning from "./icons/IconWarning.vue";
+import IconError from "./icons/IconError.vue";
 const props = defineProps({
   type: { type: String, default: "info" },
 });
