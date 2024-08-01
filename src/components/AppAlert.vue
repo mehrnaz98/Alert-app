@@ -8,6 +8,8 @@ const props = defineProps({
   type: { type: String, default: "info" },
 });
 
+const emit = defineEmits(["closed"]);
+
 const alertType = computed(() => {
   return {
     info: "alert-info",
