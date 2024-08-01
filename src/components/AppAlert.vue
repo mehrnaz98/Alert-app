@@ -1,6 +1,17 @@
 <script setup>
+import { Warning } from "postcss";
+import { computed } from "vue";
 defineProps({
   type: { type: String, default: "info" },
+});
+
+const alertType = computed(() => {
+  return {
+    info: "alert-info",
+    success: "alert-success",
+    Warning: "alert-warning",
+    error: "alert-error",
+  };
 });
 </script>
 
