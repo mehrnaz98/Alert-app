@@ -31,6 +31,7 @@ const icon = computed(() => {
 const closed = ref(false);
 function close() {
   closed.value = true;
+  emit("closed");
 }
 </script>
 
