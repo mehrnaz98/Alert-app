@@ -28,12 +28,12 @@ const icon = computed(() => {
 
 const closed = ref(false);
 function close() {
-  close.value = true;
+  closed.value = true;
 }
 </script>
 
 <template>
-  <div role="alert" :class="`alert ${alertType}`">
+  <div v-if="!closed" role="alert" :class="`alert ${alertType}`">
     <component :is="icon"></component>
     <span><slot></slot></span>
     <button @click="close">✖</button>
