@@ -31,6 +31,7 @@ const icon = computed(() => {
   <div role="alert" :class="`alert ${alertType}`">
     <component :is="icon"></component>
     <span><slot></slot></span>
+    <button>✖</button>
   </div>
 </template>
 
