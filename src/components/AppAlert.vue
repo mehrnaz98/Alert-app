@@ -1,7 +1,6 @@
 <script setup>
-import { Warning } from "postcss";
 import { computed } from "vue";
-defineProps({
+const props = defineProps({
   type: { type: String, default: "info" },
 });
 
@@ -9,14 +8,14 @@ const alertType = computed(() => {
   return {
     info: "alert-info",
     success: "alert-success",
-    Warning: "alert-warning",
+    warning: "alert-warning",
     error: "alert-error",
-  };
+  }[props.type];
 });
 </script>
 
 <template>
-  <div role="alert" :class="`alert alert-${type}`">
+  <div role="alert" :class="`alert ${alertType}`">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
