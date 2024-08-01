@@ -1,5 +1,8 @@
 <script setup>
 import AppAlert from "./components/AppAlert.vue";
+function handleClose() {
+  console.log("closed");
+}
 </script>
 
 <template>
@@ -7,7 +10,7 @@ import AppAlert from "./components/AppAlert.vue";
     <AppAlert type="info"></AppAlert>
     <AppAlert type="success"></AppAlert>
     <AppAlert type="warning"></AppAlert>
-    <AppAlert type="error"></AppAlert>
+    <AppAlert type="error @close=handleClose"></AppAlert>
   </div>
 </template>
 
