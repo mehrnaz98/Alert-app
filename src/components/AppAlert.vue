@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import IconInfo from "./icons/IconInfo.vue";
 import IconSuccess from "./icons/IconSuccess.vue";
 import IconWarning from "./icons/IconWarning.vue";
@@ -25,13 +25,18 @@ const icon = computed(() => {
     error: IconError,
   }[props.type];
 });
+
+const closed = ref(false);
+function close() {
+  close.value = true;
+}
 </script>
 
 <template>
   <div role="alert" :class="`alert ${alertType}`">
     <component :is="icon"></component>
     <span><slot></slot></span>
-    <button>✖</button>
+    <button @click="close">✖</button>
   </div>
 </template>
 
