@@ -10,7 +10,7 @@ function handleClose() {
     <AppAlert type="info"></AppAlert>
     <AppAlert type="success"></AppAlert>
     <AppAlert type="warning"></AppAlert>
-    <AppAlert type="error @close=handleClose"></AppAlert>
+    <AppAlert type="error" @close="handleClose"></AppAlert>
   </div>
 </template>
 
