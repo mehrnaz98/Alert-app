@@ -10,7 +10,7 @@ function handleClose() {
     <AppAlert type="info">New software update available.</AppAlert>
     <AppAlert type="success">Your purchase has been confirmed!</AppAlert>
     <AppAlert type="warning">Warning: Invalid email address!</AppAlert>
-    <AppAlert type="error" @close="handleClose"
+    <AppAlert type="error" @closed="handleClose"
       >Error! Task failed successfully.</AppAlert
     >
   </div>
