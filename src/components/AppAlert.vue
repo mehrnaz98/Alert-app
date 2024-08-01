@@ -29,6 +29,7 @@ const icon = computed(() => {
 
 <template>
   <div role="alert" :class="`alert ${alertType}`">
+    <component :is="icon"></component>
     <span>New software update available.</span>
   </div>
 </template>
