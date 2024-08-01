@@ -16,6 +16,15 @@ const alertType = computed(() => {
     error: "alert-error",
   }[props.type];
 });
+
+const icon = computed(() => {
+  return {
+    info: IconInfo,
+    success: IconSuccess,
+    warning: IconWarning,
+    error: IconError,
+  }[props.type];
+});
 </script>
 
 <template>
