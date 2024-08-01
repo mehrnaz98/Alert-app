@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+defineProps({
+  type: { type: String, default: "info" },
+});
+</script>
 
 <template>
   <div role="alert" class="alert alert-info">
